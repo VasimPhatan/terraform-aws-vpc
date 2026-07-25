@@ -25,3 +25,23 @@ data "aws_route_table" "main" {
 output "vpc_id" {
   value = aws_vpc.main.id
 }
+
+
+output "public_subnet_id" {
+  value = aws_subnet.public[count.index].id
+}
+
+
+output "private_subnet_id" {
+  value = aws_subnet.private[count.index].id
+}
+
+
+output "database_subnet_id" {
+  value = aws_subnet.database[count.index].id
+}
+
+
+
+
+
