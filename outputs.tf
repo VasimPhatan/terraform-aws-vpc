@@ -20,3 +20,8 @@ data "aws_route_table" "main" {
     values = ["true"]
   }
 }
+
+
+output "vpc_id" {
+  value = aws_vpc.main.id
+}
